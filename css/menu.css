@@ -1,0 +1,167 @@
+.menu {
+	background: url(http://cs.uns.edu.ar/materias/sitio/images/grad1-mask.png) repeat-x top #354c75;
+	border-top: 1px solid #132544;
+	line-height: 1;
+	position: relative;
+	z-index: 10;
+}
+
+.nav {
+	margin: 0 auto;
+	max-width: 1200px;
+	position: relative;
+	width: 97%;
+}
+
+.nav li {
+	border-left: 1px solid #666666;
+	border-right: 1px solid #333333;
+	color: #cccccc;
+	display: block;
+	font-weight: bold;
+	line-height: normal;
+	margin: 0;
+	padding: 3px 15px;
+	text-decoration: none;
+
+	float: left;
+	position: relative;
+	list-style: none;
+}
+
+.nav li span {
+	color: #cccccc;
+	display: block;
+	text-decoration: none;
+	font-weight: 700;
+  	line-height: normal;
+}
+
+.nav li span.has-image {
+	background-position: left top;
+	background-repeat: no-repeat;
+	display: block;
+	padding-left: 19px;
+}
+
+
+.nav li span.haschild {
+	background: url(http://cs.uns.edu.ar/materias/sitio/images/arrow3.png) no-repeat left center;
+	padding-left: 12px;
+}
+
+/* main level link */
+.nav a {
+	color: #cccccc;
+	text-decoration: none;
+	display: block;
+}
+
+/* main level link hover */
+.nav .current a, .nav li:hover > a {
+}
+
+/* sub levels link hover */
+.nav li:hover {
+    cursor: pointer;
+    background: url(http://cs.uns.edu.ar/materias/sitio/images/grad1-mask.png) repeat-x top #5c75a1
+}
+
+.nav li:hover span {
+	color: #fff;
+}
+
+.nav li ul {
+	padding: 1px;
+}
+
+.nav li ul li a {
+	padding: 3px;
+}
+
+.nav li ul li span {
+	font-weight: 400;
+	color: #cccccc!important;
+}
+
+.nav li ul li:hover span {
+	color: #fff!important;
+}
+
+/* dropdown */
+.nav li:hover > ul {
+	display: block;
+}
+
+/* level 2 list */
+.nav ul {
+	display: none;
+
+	margin: 0;
+	padding: 0;
+	min-width: 200px;
+	position: absolute;
+	top: 20px;
+	left: -2px;
+	opacity: 0.99;
+	z-index: 1;
+	background: #4c6083;
+  	border-bottom: 1px solid #192f55;
+  	border-left: 1px solid #192f55;
+  	border-right: 1px solid #192f55;
+  	color: #ccc;
+}
+
+.nav ul li:first-child {
+	border-top: none;
+}
+
+.nav ul li {
+	float: none;
+	margin: 0;
+	padding: 0;
+	border: none;
+	border-top: 1px dotted #444;
+}
+
+.nav ul a {
+}
+
+/* level 3+ list */
+.nav ul ul {
+	left: 181px;
+	top: -3px;
+	margin: 2px;
+}
+
+.nav ul ul li a {
+	background: none;
+	border: 0;
+	color: #ccc;
+	font-weight: 400;
+	padding: 3px;
+}
+
+/* rounded corners of first and last link */
+.nav ul li:first-child > a {
+    /*border-top: 0*/
+}
+ul.nav li:last-child {
+}
+
+/* clearfix */
+.nav:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+html[xmlns] .nav {
+	display: block;
+}
+ 
+* html .nav {
+	height: 1%;
+}
