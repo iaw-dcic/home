@@ -8,7 +8,14 @@
     <script type="text/javascript">
 	    $(document).ready(function() {
 		    var hash = document.location.hash.substring(1);
-		    $("#container").load("http://iaw-dcic.github.io/" + hash + "/index.html", function() {});
+		    var base = "http://iaw-dcic.github.io/" + hash
+		    $("#container").load(base + "/index.html", function() {
+		    	$("a", "#container")
+					.each(function() {
+						if ($(this).attr("href").startsWith(".")) 
+					  		this.href = base + $(this).attr("href").substring(1);
+					});
+		    });
 		});
 	</script>
 	<link href="http://cs.uns.edu.ar/materias/sitio/images/favicon.ico" rel="shortcut icon" type="image/x-icon">
