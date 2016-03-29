@@ -2921,3 +2921,15 @@ div.bubble-hl1 .box-ct,div.bubble-hl2 div.box-ct {
 ul.level0 li.over,ul.level0 li.haschild-over,ul.level0 li.active {
     background: url(http://cs.uns.edu.ar/materias/sitio/images/grad1-mask.png) repeat-x top #5c75a1
 }
+
+#main-content {
+    text-align: center;
+    line-height: 30px;
+    font-size: large;
+}
+
+#main-content h1 {
+    margin: 20px 0; 
+    font-size: 150%;
+
+}

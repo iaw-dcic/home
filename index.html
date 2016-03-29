@@ -8,14 +8,18 @@
     <script type="text/javascript">
 	    $(document).ready(function() {
 		    var hash = document.location.hash.substring(1);
-		    var base = "http://iaw-dcic.github.io/" + hash
-		    $("#container").load(base + "/index.html", function() {
-		    	$("a", "#container")
-					.each(function() {
-						if ($(this).attr("href").startsWith(".")) 
-					  		this.href = base + $(this).attr("href").substring(1);
-					});
-		    });
+		    if (hash === "") {
+		    	$("#main-content").show();
+		    } else {
+			    var base = "http://iaw-dcic.github.io/" + hash
+			    $("#container").load(base + "/index.html", function() {
+			    	$("a", "#container")
+						.each(function() {
+							if ($(this).attr("href").startsWith(".")) 
+						  		this.href = base + $(this).attr("href").substring(1);
+						});
+			    });
+		    }
 		});
 	</script>
 	<link href="http://cs.uns.edu.ar/materias/sitio/images/favicon.ico" rel="shortcut icon" type="image/x-icon">
@@ -123,6 +127,15 @@
 		<div id="ja-container" class="wrap ja-r1">
 			<div class="main clearfix">
 				<div id="container" class="inner clearfix">
+					<div id="main-content" style="display: none;">
+						<h1>Clases Prácticas</h1>
+						<div>
+							<ul>
+								<li><a href="./#html-css">HTML - CSS</a></li>
+								<li><a href="./#js-dom">Javascript y DOM</a></li>
+							</ul>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
