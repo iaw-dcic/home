@@ -6,11 +6,16 @@
     <link href="css/menu.css" type="text/css" rel="stylesheet">
  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script type="text/javascript">
-	    $(document).ready(function() {
+	    $(document).ready(updateContent);
+	    $(window).on('hashchange', updateContent);
+
+		function updateContent() {
 		    var hash = document.location.hash.substring(1);
 		    if (hash === "") {
+		    	$("#container").hide();
 		    	$("#main-content").show();
 		    } else {
+		    	$("#main-content").hide();
 			    var base = "http://iaw-dcic.github.io/" + hash
 			    $("#container").load(base + "/index.html", function() {
 			    	$("a", "#container")
@@ -18,9 +23,9 @@
 							if ($(this).attr("href").startsWith(".")) 
 						  		this.href = base + $(this).attr("href").substring(1);
 						});
-			    });
+			    }).show();
 		    }
-		});
+		}
 	</script>
 	<link href="http://cs.uns.edu.ar/materias/sitio/images/favicon.ico" rel="shortcut icon" type="image/x-icon">
 
@@ -127,14 +132,17 @@
 		<div id="ja-container" class="wrap ja-r1">
 			<div class="main clearfix">
 				<div id="container" class="inner clearfix">
-					<div id="main-content" style="display: none;">
-						<h1>Clases Prácticas</h1>
-						<div>
-							<ul>
-								<li><a href="./#html-css">HTML - CSS</a></li>
-								<li><a href="./#js-dom">Javascript y DOM</a></li>
-							</ul>
-						</div>
+				</div>
+				<div id="main-content" style="display: none;">
+					<h1>Clases Prácticas</h1>
+					<div>
+						<ul>
+							<li><a href="./#html-css">HTML - CSS</a></li>
+							<li><a href="./#js-dom">Javascript y DOM</a></li>
+							<li><a href="./#phpsqlite">PHP y SQLite</a></li>
+							<li><a href="https://iaw-dcic.github.io/slides/#presentation=html5">HTML 5</a></li>
+							<li><a href="./#angularjs">Angular JS</a></li>
+						</ul>
 					</div>
 				</div>
 			</div>
