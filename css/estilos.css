@@ -2933,3 +2933,28 @@ ul.level0 li.over,ul.level0 li.haschild-over,ul.level0 li.active {
     font-size: 150%;
 
 }
+
+
+#defensa {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 800px;
+    margin: auto;
+}
+
+#defensa td, #defensa th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#defensa tr:nth-child(even){background-color: #f2f2f2;}
+
+#defensa tr:hover {background-color: #ddd;}
+
+#defensa th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #4CAF50;
+    color: white;
+}
