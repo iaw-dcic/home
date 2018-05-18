@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ingeniería de Aplicaciones Web</title>
+    <link href="css/estilos.css" type="text/css" rel="stylesheet">
+    <link href="css/menu.css" type="text/css" rel="stylesheet">
+ 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type="text/javascript">
+	    $(document).ready(updateContent);
+	    $(window).on('hashchange', updateContent);
+
+		function updateContent() {
+		    var hash = document.location.hash.substring(1);
+		    if (hash === "") {
+		    	$("#container").hide();
+		    	$("#main-content").show();
+		    } else {
+		    	$("#main-content").hide();
+			    var base = "https://iaw-dcic.github.io/" + hash
+			    $("#container").load(base + "/index.html", function() {
+			    	$("a", "#container")
+						.each(function() {
+							if ($(this).attr("href").startsWith(".")) 
+						  		this.href = base + $(this).attr("href").substring(1);
+						});
+			    }).show();
+		    }
+		}
+	</script>
+	<link href="https://cs.uns.edu.ar/materias/sitio/images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+
+  </head>
+	<body id="bd" class="fs3 FF">
+		<div id="ja-header" class="wrap">
+			<div class="main" style="background-image:url(&quot;https://cs.uns.edu.ar/materias/sitio/images/header1.jpg&quot;)">
+				<div class="inner clearfix">
+					<div class="ja-headermask">&nbsp;</div>
+					<h1 class="logo">
+						<a href="https://cs.uns.edu.ar/home" title="Departamento de Ciencias e Ingeniería de la Computación"><span>Departamento de Ciencias e Ingeniería de la Computación</span></a>
+					</h1>
+				</div>
+			</div>
+		</div>
+		<div class="menu">
+		   <ul class="nav">
+		      <li class="ui-menu-item" role="menuitem">
+		         <a href="https://cs.uns.edu.ar/home/datos-institucionales.html" title="Institucional">
+		         	<span class="haschild">Institucional</span>
+	         	 </a>
+                 <ul>
+                    <li class="ui-menu-item" role="menuitem">
+                    	<a href="https://cs.uns.edu.ar/home/datos-institucionales/historia.html" title="Historia">
+                    		<span class="has-image" style="background-image:url(https://cs.uns.edu.ar/home/images/menu/script.gif);"><span class="menu-title">Historia</span></span></a></li>
+                    <li class="ui-menu-item" role="menuitem">
+                    	<a href="https://cs.uns.edu.ar/home/integrantes-consejo-dcic.html" title="Autoridades">
+                    		<span class="menu-title">Autoridades</span>
+                		</a>
+            		</li>
+                    <li class="ui-menu-item" role="menuitem">
+                    	<a href="https://cs.uns.edu.ar/home/datos-institucionales/mision-institucional.html" title="Misión">
+                    		<span class="has-image" style="background-image:url(https://cs.uns.edu.ar/home/images/menu/script.png);"><span class="menu-title">Misión</span></span>
+                		</a>
+            		</li>
+                    <li class="ui-menu-item" role="menuitem">
+                    	<a href="https://cs.uns.edu.ar/home/datos-institucionales/organigrama.html" title="Organigrama">
+                    		<span class="has-image" style="background-image:url(https://cs.uns.edu.ar/home/images/menu/sitemap-application.png);"><span class="menu-title">Organigrama</span></span>
+                		</a>
+            		</li>
+                 </ul>
+		      </li>
+		      <li class="ui-menu-item" role="menuitem">
+		      	 <a href="https://cs.uns.edu.ar/home/docentes-investigadores.html" title="Docentes/Investigadores">
+		      	 	<span >Docentes/Investigadores</span>
+      	 		 </a>
+      	 	  </li>
+		      <li class="ui-menu-item" role="menuitem">
+		         <a href="https://cs.uns.edu.ar/home/carreras-de-grado.html" title="Carreras de Grado">
+		         	<span class="haschild">Carreras de Grado</span>
+		         </a>
+                 <ul>
+                    <li class="ui-menu-item" role="menuitem">
+                    	<a href="https://cs.uns.edu.ar/home/carreras/licenciatura.html" class="mega first" id="menu116" title="Licenciatura en Ciencias de la Computación"><span class="has-image" style="background-image:url(https://cs.uns.edu.ar/home/images/menu/minilcc.png);"><span class="menu-title">Licenciatura en Ciencias de la Computación</span></span></a>
+                	</li>
+                    <li class="ui-menu-item" role="menuitem">
+                    	<a href="https://cs.uns.edu.ar/home/carreras/ing-en-computacion.html" class="mega" id="menu117" title="Ingeniería en Computación"><span class="has-image" style="background-image:url(https://cs.uns.edu.ar/home/images/menu/miniisc.png);"><span class="menu-title">Ingeniería en Computación</span></span></a>
+                	</li>
+                    <li class="ui-menu-item" role="menuitem">
+                    	<a href="https://cs.uns.edu.ar/home/carreras/ing-en-sist-de-informacion.html" class="mega last" id="menu118" title="Ingeniería en Sistemas de Software"><span class="has-image" style="background-image:url(https://cs.uns.edu.ar/home/images/menu/miniisc.png);"><span class="menu-title">Ingeniería en Sistemas de Información</span></span></a>
+                	</li>
+                 </ul>
+		      </li>
+		      <li class="ui-menu-item" role="menuitem">
+		         <a href="https://cs.uns.edu.ar/home/posgrado.html" title="Carreras de Posgrado">
+		         	<span class="haschild">Carreras de Posgrado</span>
+	         	 </a>
+                 <ul>
+                    <li class="ui-menu-item" role="menuitem">
+                    	<a href="https://cs.uns.edu.ar/home/carreras/magister.html" title="Magister en Ciencias de la Computación"><span class="has-image" style="background-image:url(https://cs.uns.edu.ar/home/images/menu/minimg.png);">
+                    		<span class="menu-title">Magister en Ciencias de la Computación</span></span>
+                		</a>
+                	</li>
+                    <li class="ui-menu-item" role="menuitem">
+                    	<a href="https://cs.uns.edu.ar/home/carreras/doctorado.html" title="Doctorado en Ciencias de la Computación"><span class="has-image" style="background-image:url(https://cs.uns.edu.ar/home/images/menu/minidr.png);">
+                    		<span class="menu-title">Doctorado en Ciencias de la Computación</span></span>
+                		</a>
+                	</li>
+                 </ul>
+		      </li>
+		      <li class="ui-menu-item" role="menuitem">
+		      	<a href="https://cs.uns.edu.ar/home/investigacion.html" title="Investigación">
+		      		<span class="menu-title">Investigación</span></a>
+	      		</li>
+		      <li class="ui-menu-item" role="menuitem">
+		      	<a href="https://cs.uns.edu.ar/home/servicios-a-terceros.html" title="Servicios a Terceros">
+		      		<span class="has-image" style="background-image:url(https://cs.uns.edu.ar/home/images/menu/wheels-mini-two.png);"><span class="menu-title">Servicios a Terceros</span></span>
+	      		</a>
+      		  </li>
+		      <li class="ui-menu-item" role="menuitem">
+		      	<a href="https://www.facebook.com/NoticiasDCICUns" title="Noticias DCIC-UNS">
+		      		<span class="has-image" style="background-image:url(https://cs.uns.edu.ar/home/images/menu/facebook.png);"><span class="menu-title">Noticias DCIC-UNS</span></span>
+	      		</a>
+      		  </li>
+		   </ul>
+		</div>
+
+		<div id="ja-topsl" class="wrap">
+			<div class="main clearfix caption">
+				<h1 style="padding: 10px; color: rgb(204, 204, 204);">Ingeniería de Aplicaciones Web</h1>
+			</div>
+		</div>
+
+		<div id="ja-container" class="wrap ja-r1">
+			<div class="main clearfix">
+				<div id="container" class="inner clearfix">
+				</div>
+				<div id="main-content" style="display: none;">
+					<h1>Resultados Proyecto 2</h1>
+					<div>
+					<table id="defensa">
+					<thead>
+						<tr>
+							<th title="Field #1">Comisión</th>
+							<th title="Field #3">Repositorio</th>
+							<th title="Field #4">Proyecto</th>
+							<th title="Field #5">Corrección</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr><td>Com01</td><td><a target="_blank" href="https://github.com/UNS-IAW-2018-Com001/Proyecto2-Tema1">Repositorio</a></td><td><a target="_blank" href="https://scoutsenargentina.herokuapp.com/">Proyecto</a></td><td>✩✩ R1 R2</td></tr>
+						<tr><td>Com02</td><td><a target="_blank" href="https://github.com/UNS-IAW-2018-Com02/UNS-IAW-ENTREGA-2">Repositorio</a></td><td><a target="_blank" href="https://laliga.herokuapp.com">Proyecto</a></td><td>✩✩✩½</td></tr>
+						<tr><td>Com03</td><td><a target="_blank" href="https://github.com/UNS-IAW-2018-Com03/Proyecto2-IAW/releases/tag/nodejs">Repositorio</a></td><td><a target="_blank" href="https://mis-reclamos.herokuapp.com/">Proyecto</a></td><td>✩✩½</td></tr>
+						<tr><td>Com05</td><td><a target="_blank" href="https://github.com/UNS-IAW-2018-Com05/Torneos-URS-Entrega-2-Heroku/releases/tag/nodejs">Repositorio</a></td><td><a target="_blank" href="http://torneours.herokuapp.com/">Proyecto</a></td><td>✩✩½</td></tr>
+						<tr><td>Com06</td><td><a target="_blank" href="https://github.com/UNS-IAW-2018-Com06/iaw-proyecto/releases/tag/nodejs">Repositorio</a></td><td><a target="_blank" href="https://unimapoteca.herokuapp.com/">Proyecto</a></td><td>✩✩ R1</td></tr>
+						<tr><td>Com07</td><td><a target="_blank" href="https://github.com/UNS-IAW-2018-Com07/UNS_IAW_2018_Com07/releases/tag/nodejs">Repositorio</a></td><td><a target="_blank" href="https://ktphi.herokuapp.com/">Proyecto</a></td><td>✩✩✩✩</td></tr>
+						<tr><td>Com08</td><td><a target="_blank" href="https://github.com/UNS-IAW-2018-COM08/ServiceMaps/releases/tag/nodejs">Repositorio</a></td><td><a target="_blank" href="https://servicemaps.herokuapp.com/">Proyecto</a></td><td>✩✩ R2</td></tr>
+						<tr><td>Com09</td><td><a target="_blank" href="https://github.com/UNS-IAW-2018-Com09/Proyecto2IAW/releases/tag/nodejs">Repositorio</a></td><td><a target="_blank" href="https://girabahiense.herokuapp.com/">Proyecto</a></td><td>Reentrega</td></tr>
+						<tr><td>Com10</td><td><a target="_blank" href="https://github.com/UNS-IAW-2018-Com10/NYCityTour/releases/tag/nodejs">Repositorio</a></td><td><a target="_blank" href="https://ciudadesturisticas.herokuapp.com/">Proyecto</a></td><td>✩✩ R1</td></tr>
+						
+						<tr><td>Com11</td><td><a target="_blank" href="https://github.com/UNS-IAW-2018-Com11/Proyecto2/releases/tag/nodejs">Repositorio</a></td><td><a target="_blank" href="">Proyecto</a></td><td>Reentrega</td></tr>
+
+						<tr><td>Com12</td><td><a target="_blank" href="">Repositorio</a></td><td><a target="_blank" href="">Proyecto</a></td><td>No entregó</td></tr>
+
+						<tr><td>Com13</td><td><a target="_blank" href="https://github.com/UNS-IAW-2018-Com13/Proyecto-2/releases/tag/nodejs">Repositorio</a></td><td><a target="_blank" href="https://torneo-hs.herokuapp.com/">Proyecto</a></td><td>✩✩ R1 R2</td></tr>
+						<tr><td>Com14</td><td><a target="_blank" href="https://github.com/UNSIAW2018Com14/Proyecto2">Repositorio</a></td><td><a target="_blank" href="https://hstournament.herokuapp.com/">Proyecto</a></td><td>✩✩ R2</td></tr>
+						<tr><td>Com15</td><td><a target="_blank" href="https://github.com/UNS-IAW-2018-Com15/proyecto-iaw-2/releases/tag/nodejs">Repositorio</a></td><td><a target="_blank" href="https://lacaprichosa.herokuapp.com/">Proyecto</a></td><td>✩✩✩ R2</td></tr>
+						<tr><td>Com16</td><td><a target="_blank" href="https://github.com/UNS-IAW-2018-Com16/TorneoFutbol-Entrega2/releases/tag/nodejs">Repositorio</a></td><td><a target="_blank" href="https://ligadefutbol.herokuapp.com/">Proyecto</a></td><td>✩✩ R3</td></tr>
+
+						<tr><td>Com17</td><td><a target="_blank" href="https://github.com/andresGarcia90/UNS_IAW_2018_Com17/tree/gh_pages">Repositorio</a></td><td><a target="_blank" href="">Proyecto</a></td><td>Reentrega</td></tr>
+
+						<tr><td>Com18</td><td><a target="_blank" href="https://github.com/uns-iaw-2018-com18/wewantbeer-nodejs/releases/tag/Nodejs">Repositorio</a></td><td><a target="_blank" href="https://wewantbeer.herokuapp.com/">Proyecto</a></td><td>✩✩✩ R1</td></tr>
+						<tr><td>Com19</td><td><a target="_blank" href="https://github.com/UNS-IAW-2018-Com19/Proyecto-2-IAW/releases/tag/v2.0">Repositorio</a></td><td><a target="_blank" href="https://e-sportstournament.herokuapp.com/">Proyecto</a></td><td>✩✩½</td></tr>
+
+						<tr><td>Com20</td><td><a target="_blank" href="">Repositorio</a></td><td><a target="_blank" href="">Proyecto</a></td><td>Reentrega</td></tr>
+
+						<tr><td>Com21</td><td><a target="_blank" href="https://github.com/hansenSchiel/UNS_IAW_2018_Com21/releases/tag/nodejs">Repositorio</a></td><td><a target="_blank" href="http://iaw-comision21.herokuapp.com/">Proyecto</a></td><td>Reentrega</td></tr>
+					</tbody>
+				</table>
+				<p>.</p>
+				<div>
+					<ul>
+						<li>R1: Reentrega Servicio Web</li>
+						<li>R2: Reengreta Autenticación</li>
+						<li>R3: Reengrega Funcionalidad</li>
+						
+					</ul>
+				</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div id="ja-botsl" class="wrap">
+			<div class="main clearfix">
+				<div class="ja-box column ja-box-left" style="width:50%">
+					<div style="height: 101px;" class="ja-moduletable moduletable clearfix" id="Mod47">
+						<div class="ja-box-ct clearfix">
+							<p><em><span style="color:#fff"><img style="margin:5px;float:left" src="https://cs.uns.edu.ar/home/images/general/logosbottom.png" alt="DCIC-UNS">Departamento
+								de Ciencias e Ingeniería de la Computación<br>Universidad Nacional del
+								Sur<br>Avenida Alem 1253 - Bahía Blanca, Buenos Aires, Argentina.<br>Telefono:
+								(54)(291)4595135<br>Fax: (54)(291)4595136</span></em>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="ja-box column ja-box-right" style="width:50%">
+					<div style="height: 101px;" class="ja-moduletable moduletable clearfix" id="Mod49">
+						<div class="ja-box-ct clearfix">
+							<span style="color:#cff">Las fotografías del encabezado son de Carlos Lorenzetti.</span> 
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+  </body>
+</html>
