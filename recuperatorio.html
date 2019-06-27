@@ -8,7 +8,6 @@
     <script type="text/javascript">
 	    $(document).ready(updateContent);
 	    $(window).on('hashchange', updateContent);
-
 		function updateContent() {
 		    var hash = document.location.hash.substring(1);
 		    if (hash === "") {
@@ -134,38 +133,34 @@
 				<div id="container" class="inner clearfix">
 				</div>
 				<div id="main-content" style="display: none;">
- 					<h1>Notas Proyectos y Parciales</h1>
+					<h1>Resultados Examen Parcial</h1>
+					<p>Los alumnos con A o A* cursan la materia.</p>
+					<p>Los alumnos con D tienen el recuperatorio el Jueves 27 a partir de las 16 hs.</p>
+					<p>Los exámenes se mostrarán el Martes 25, en el horario de práctica</p>
 					<div>
-						<ul>
-							<li><a href="./proyecto1.html">Proyecto 1</a></li>
-							<li><a href="./proyecto2.html">Proyecto 2</a></li>
-							<li><a href="./parcial.html">Examen Parcial</a></li>
-							<li><a href="./recuperatorio.html">Examen Recuperatorio</a></li>
-						</ul>
-					</div>
- 					<h1>Clases Prácticas</h1>
-					<div>
-						<ul>
-							<li><a href="https://iaw-dcic.github.io/slides/#presentation=html">HTML</a></li>
-							<li><a href="https://github.com/iaw-dcic/lab-bootstrap">Bootstrap</a></li>
-							<li><a href="https://github.com/iaw-dcic/calculadora">JS y DOM</a></li>
-							<li><a href="https://github.com/iaw-dcic/lab-autocompletar">Autocompletar</a></li>
-							<li><a href="https://slides.com/tucky/react/#/">Introducción a React</a></li>
-
-
-<!-- 							<li><a href="./#css">CSS</a></li>
-							<li><a href="./#js-dom">Javascript y DOM</a></li>
-							<li><a href="https://iaw-dcic.github.io/slides/#presentation=jquery">jQuery</a></li>
-							<li><a href="https://iaw-dcic.github.io/slides/#presentation=nodejs">NodeJS</a></li>
-							<li><a href="https://iaw-dcic.github.io/slides/#presentation=mongo">MongoDB</a></li>
-							<li><a href="https://iaw-dcic.github.io/slides/#presentation=heroku">Heroku</a></li>
- --><!-- 							
-							<li><a href="https://iaw-dcic.github.io/git-guide/">Git Guide</a></li>
-							<li><a href="https://iaw-dcic.github.io/slides/#presentation=html5">HTML 5</a></li>
-							<li><a href="https://github.com/iaw-dcic/laravel-pizzas">Laravel</a></li>
-							<li><a href="./#angularjs">Angular JS</a></li>
- -->						
-						</ul>
+					<table id="defensa">
+					<thead>
+						<tr>
+							<th title="LU">LU</th>
+							<th title="Resulç">Resultado</th>
+							<th title="Nota">Nota</th>
+						</tr>
+					</thead>
+					<tbody>
+<tr><td>111605</td><td>A</td><td></td><td>Cursa</td></tr>
+<tr><td>?</td><td>A</td><td>.5</td><td>Cursa</td></tr>
+<tr><td>105868</td><td>A</td><td>.5</td><td>Cursa</td></tr>
+<tr><td>102457</td><td>A</td><td></td><td>Cursa</td></tr>
+<tr><td>111230</td><td>A</td><td>.5</td><td>Cursa</td></tr>
+<tr><td>113322</td><td>A</td><td></td><td>Cursa</td></tr>
+<tr><td>99919</td><td>A</td><td>.5</td><td>Cursa</td></tr>
+<tr><td>105336</td><td>A</td><td>.5</td><td>Cursa</td></tr>
+<tr><td>104936</td><td>D</td><td></td><td>No Cursa</td></tr>
+<tr><td>10678</td><td>A</td><td>.5</td><td>Cursa</td></tr>
+<tr><td>108641</td><td>A</td><td>.5</td><td>Cursa</td></tr>
+<tr><td>110895</td><td>A</td><td>.5</td><td>Cursa</td></tr>
+					</tbody>
+				</table>
 					</div>
 				</div>
 			</div>
